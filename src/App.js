@@ -6,7 +6,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Edite <code>src/App.js</code> salve e atualize a paginas.
         </p>
         <a
           className="App-link"
