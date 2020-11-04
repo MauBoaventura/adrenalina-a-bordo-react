@@ -1,34 +1,28 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 
 import api from '../../services/api';
+import { login } from '../../services/auth';
 import logobarco from '../../assets/barco.svg';
 import jsonWebTokenService from 'jsonwebtoken'
 
 
-export default function Login(){
+export default function Login({ history }) {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
     async function handleSubmit(event) {
         event.preventDefault();
-        const resp = await api.post('/login', { email, password })
-        const {token}=resp.data;
-        console.log(token)
+        try {
+            const resp = await api.post('/login', { email, password })
+            const { token } = resp.data;
+            console.log(token)
+            login(token)
+        } catch (error) {
+            console.log(error)
+        }
+        history.push('/home')
     }
 
-    async function saveJwt (jwt) {
-        try {
-          if (jwt) {
-            const decodedJwt = jsonWebTokenService.decode(jwt)
-            await this.localforage.setItem('jwt_usuario', jwt)
-            await this.localforage.setItem('dados_usuario', decodedJwt)
-            return true
-          }
-        } catch (err) {
-            if (err instanceof jsonWebTokenService.JsonWebTokenError) return false
-            throw err
-        }
-    }
     return (
         < >
             <img className='logo' src={logobarco} alt="logo" />
