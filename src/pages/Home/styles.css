@@ -1,0 +1,61 @@
+.main {
+    background-color: rgb(255, 255, 255);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 25%);
+    width: 100%;
+    max-width: 90vw;
+    min-height: 90vh;
+    margin: 40px auto 0;
+    border-radius: 10px;
+    padding: 15px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: aliceblue;
+    gap: 4px;
+    column-gap: 15px;
+}
+
+.passeios {
+    grid-row: span 3;
+    border-width: 1.3px;
+    border-style: dashed;
+    border-color: rgb(34, 61, 85);
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.agendamentos {
+    grid-row: span 3;
+    border-width: 1.3px;
+    border-style: solid;
+    border-color: rgb(34, 61, 85);
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.veiculos {
+    grid-row: span 3;
+    border-width: 1.3px;
+    border-style: solid;
+    border-color: rgb(34, 61, 85);
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.proximos {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    text-align: center;
+    border-width: 1.3px;
+    border-style: solid;
+    border-color: rgb(34, 61, 85);
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.dia-da-semana {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}

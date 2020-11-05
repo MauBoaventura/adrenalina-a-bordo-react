@@ -4,10 +4,8 @@ import './App.css';
 
 
 function App() {
-    return(
-        <div className="container" >
-            <Router></Router>
-        </div>
+    return (
+        <Router></Router>
     )
 }
 

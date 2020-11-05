@@ -3,7 +3,6 @@ import React, { useState } from 'react'
 import api from '../../services/api';
 import { login } from '../../services/auth';
 import logobarco from '../../assets/barco.svg';
-import jsonWebTokenService from 'jsonwebtoken'
 
 
 export default function Login({ history }) {
@@ -24,7 +23,7 @@ export default function Login({ history }) {
     }
 
     return (
-        < >
+        <div className="container" >
             <img className='logo' src={logobarco} alt="logo" />
             <div className="content">
                 <form onSubmit={handleSubmit}>
@@ -45,6 +44,6 @@ export default function Login({ history }) {
                     <button type='submit'>Entrar</button>
                 </form>
             </div>
-        </>
+        </div>
     );
 }
