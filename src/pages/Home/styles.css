@@ -1,22 +1,20 @@
 .main {
-    background-color: rgb(255, 255, 255);
+    /* background-color: #3f1b4642; */
+    color: rgb(248, 248, 248);
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(4, 25%);
     width: 100%;
     max-width: 90vw;
     min-height: 90vh;
-    margin: 40px auto 0;
-    border-radius: 10px;
+    margin: 20px auto 0;
     padding: 15px;
-    border-width: 2px;
-    border-style: solid;
-    border-color: aliceblue;
     gap: 4px;
     column-gap: 15px;
 }
 
 .passeios {
+    background-color: #361F27;
     grid-row: span 3;
     border-width: 1.3px;
     border-style: dashed;
@@ -26,6 +24,7 @@
 }
 
 .agendamentos {
+    background-color: #361F27;
     grid-row: span 3;
     border-width: 1.3px;
     border-style: solid;
@@ -35,6 +34,7 @@
 }
 
 .veiculos {
+    background-color: #361F27;
     grid-row: span 3;
     border-width: 1.3px;
     border-style: solid;
@@ -43,7 +43,37 @@
     padding: 15px;
 }
 
+.veiculos>ul {
+    list-style: none;
+    width: 100%;
+    color: rgb(255, 255, 255);
+}
+
+.veiculos>ul>li {
+    background-color: #DA682E99;
+    margin-top: 10px;
+    border-style: solid;
+    border-width: 1.3px;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.veiculos>ul>li>header {
+    font-size: 20px;
+}
+
+.veiculos>ul>li>label {
+    border-top: 15px;
+    font-size: 15px;
+}
+
+strong {
+    color: rgb(243, 171, 123);
+    font-size: 25px;
+}
+
 .proximos {
+    background-color: #131111;
     grid-column-start: 1;
     grid-column-end: 4;
     text-align: center;
