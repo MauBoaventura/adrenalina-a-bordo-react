@@ -15,14 +15,20 @@
 }
 
 .passeios {
-    background-color: #361F27;
-    grid-row: span 3;
+    /* background-color: #401dd8; */
+    /* background-color: #361F27; */
+    /* grid-row: span 3;
     border-width: 1.3px;
     border-style: dashed;
     border-color: rgb(34, 61, 85);
     border-radius: 10px;
     padding: 15px;
-    overflow-x: auto;
+    overflow-x: auto; */
+    background-color: #fff;
+    box-shadow: 0 3px 8px 0 rgba(116,129,141,.1);
+    border-radius: 8px;
+    border: 1px solid rgba(0,0,0,.125);
+    transition: box-shadow .4s ease,transform .2s;
 }
 
 .agendamentos {
@@ -93,7 +99,7 @@ a {
 }
 
 strong {
-    color: rgb(243, 171, 123);
+    color: rgb(255, 255, 255);
     font-size: 25px;
 }
 
@@ -117,11 +123,39 @@ strong {
 }
 
 .dia-da-semana>div {
-    font-size: 10px;
+    font-size: 14px;
+    border-radius: 50%;
+    padding: 4px;
+    border-width: 1.2px;
+    border-style: solid;
+    border-color: rgb(255, 255, 255);
+    width: 37px;
+    height: 37px;
+    line-height: 28px;
+    top: 90px;
+    text-align: center;
+    color: #FFF;
+    /* borde; */
 }
+
 .dia-especifico {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     font-size: 18px;
+}
+
+.todos-dias {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 18px;
+}
+
+.on {
+    background-color: rgb(122, 218, 27);
+}
+
+.off {
+    background-color: rgb(209, 28, 28);
 }
