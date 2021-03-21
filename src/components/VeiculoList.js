@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import api from '../services/api'
-import imgClose from '../assets/close.svg'
-import imgEdit from '../assets/edit.svg'
-import imgAdd from '../assets/add.svg'
+// import imgClose from '../assets/close.svg'
+// import imgEdit from '../assets/edit.svg'
+// import imgAdd from '../assets/add.svg'
+import { Card, Avatar } from 'antd';
+const { Meta } = Card;
+
 
 function ListVeiculos() {
     const [vehicles, setVehicles] = useState([]);
@@ -17,39 +20,22 @@ function ListVeiculos() {
     }, [])
 
     return (
-        <div className="veiculos">
-            <strong>
-                Veículos
-        </strong>
-            <img className='add' src={imgAdd} alt="Adicionar"></img>
-            <ul className="list-veiculos">
-                {vehicles.map(vehicle => (
-                    <li key={vehicle.id}>
-                        <header>
-                            <label>
-                                {vehicle.name}
-                            </label>
-                            <div>
-                                <a href='/'>
-                                    <img className='edit' src={imgEdit} alt="Editar"></img>
-                                </a>
-                                <a href='/'>
-                                    <img className='close' src={imgClose} alt="Fechar"></img>
-                                </a>
-                            </div>
-                        </header>
-                        <label>
-                            Descricao:
-                        {vehicle.description}
-                        </label>
-                        <div>
-                            Capacidade: {vehicle.capacity}
-                        </div>
-                    </li>
-                ))}
-
-            </ul>
-        </div>
+        <Card className="veiculos" 
+        title={"Veículos"}
+        headStyle={{fontSize:20}} 
+        style={{ backgroundColor: '#c0e8c0', borderRadius: 8 }}>
+            {vehicles.map(vehicle => (
+                    <Card key={vehicle.id} style={{marginBottom:10}}>
+                        <Meta
+                            avatar={
+                                <Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
+                            }
+                            title={vehicle.name}
+                            description={vehicle.description}
+                        />
+                    </Card>
+            ))}
+        </Card>
 
     )
 }
