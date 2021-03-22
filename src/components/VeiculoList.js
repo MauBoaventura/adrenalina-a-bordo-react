@@ -1,8 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import api from '../services/api'
-// import imgClose from '../assets/close.svg'
-// import imgEdit from '../assets/edit.svg'
-// import imgAdd from '../assets/add.svg'
 import { Card, Avatar } from 'antd';
 import { black } from 'material-ui/styles/colors';
 const { Meta } = Card;
@@ -43,7 +40,6 @@ function ListVeiculos() {
                 </Card>
             ))}
         </Card>
-
     )
 }
 
