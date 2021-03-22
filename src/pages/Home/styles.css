@@ -159,3 +159,14 @@ strong {
 .off {
     background-color: rgb(209, 28, 28);
 }
+
+::-webkit-scrollbar-track {
+    background-color: #F4F4F4;
+}
+::-webkit-scrollbar {
+    width: 6px;
+    background: #F4F4F4;
+}
+::-webkit-scrollbar-thumb {
+    background: #788177;
+}
