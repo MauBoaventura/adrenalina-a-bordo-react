@@ -17,7 +17,7 @@ const Login = () => {
         layout="fill" // Preenche todo o container pai
       />
       <div className="absolute inset-0 flex items-center justify-center bg-opacity-10 bg-white">
-        <div className="bg-white p-8 rounded-lg shadow-md">
+        <div className="bg-primary p-8 rounded-lg shadow-md">
           <h1 className="text-3xl font-semibold mb-4">Em breve!</h1>
           <p className="text-gray-600">Nossos serviços estarão disponíveis em breve. Fique atento para atualizações!</p>
         </div>

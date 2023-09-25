@@ -42,7 +42,7 @@ const Login = () => {
     <div className="flex flex-col items-center justify-center min-h-screen">
       <div className="mb-8">
       </div>
-      <div className="bg-white p-8 rounded-lg shadow-md w-80">
+      <div className="bg-primary-foreground p-8 rounded-lg shadow-md w-80">
         <h1 className="text-2xl font-semibold mb-4">Login</h1>
         <form>
           <div className="mb-4">
